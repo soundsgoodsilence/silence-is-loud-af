@@ -4,7 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -14,7 +14,19 @@ import TheWelcome from './components/TheWelcome.vue'
 
   <main>
     <TheWelcome />
+  </main> -->
+  <!-- <main> -->
+    <!-- <center><img alt="Vue logo" class="logo" src="./assets/silence_sounds_question_box_blank_pink.png" width="1500" height="1500" /></center> -->
+    <!-- <img alt="Vue logo" src="./assets/silence_sounds_box_question_mark_black_pink.png" width="2500" height="2500" /> -->
+  <main> 
+    <div class = "wrapper"> 
+      <img alt="Vue logo" src="./assets/trace.svg" width="2500" height="2500" />
+    </div>
   </main>
+    <!-- <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div> -->
+  <!-- </main> -->
 </template>
 
 <style scoped>
