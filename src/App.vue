@@ -8,25 +8,50 @@ app.use(VueWindowSizePlugin);
 
 
 <template>
-  <div class="center">
-    <img alt="question_box" src="./assets/silence_sounds_question_box_blank_pink.png" />
+  <div class="parent">
+    <div class="center">
+      <!-- <p>window width: {{ $windowWidth }}</p> -->
+      <hr>
+      <img alt="question_box" src="./assets/silence_sounds_question_box_blank_pink.png" />
+    </div>
   </div>
 </template>
+
+
+
+
 <style scoped>
 
+.parent {
+  /* border: 555px solid green; */
+  max-width: 100%;
+  max-height: 100%;
+  /* margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px; */
+  padding: 0px 0px;
+  margin: 0px 0px;
+  border: 0px 0px;
 
+}
 
 .center {
+  /* background: linear-gradient(to right, red, blue); */
     display: flex;
-    max-width: 200%;
-    max-height: 200%;
+    max-width: 100%;
+    max-height: 40%;
     justify-content: center;
     align-items: center;
-    border: 555px solid green;
+    /* padding: 0%; */
+    /* margin: 50px 50px; */
+    /* border: 100px solid green ; */
   } 
 
   .center img {
-    /* width: 100%; */
+    width: 100%;
+    height: 80%;
+    border: 10px solid black ;
   }
 
   .zoom-img {
