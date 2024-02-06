@@ -2,17 +2,30 @@
 import { createApp } from 'vue';
 import App from "./App.vue";  // your App component
 import { VueWindowSizePlugin } from 'vue-window-size/plugin';
+// import { useAutoAnimate } from '@formkit/auto-animate/vue'
+import { autoAnimatePlugin } from '@formkit/auto-animate/vue'; 
 const app = createApp(App);
-app.use(VueWindowSizePlugin);
+// const [wrapperEl] = useAutoAnimate()
+app.use(VueWindowSizePlugin).use(autoAnimatePlugin)
+//.mount('#app');
 </script>
 
 
 <template>
-  <div class="parent">
-    <div class="center">
+  <div autoAnimatePlugin class="parent">
+    <div ref="wrapperEl" class="parent">
+      <h2 @click="isOpen = !isOpen" class="text-xl font-bold">
+      
+        <img alt="question_box" src="./assets/good_black_pink.png" />
+        <img alt="question_box" src="./assets/Better_black_pink.png" />
+        <img alt="question_box" src="./assets/best_black_pink.png" />
+      </h2>
       <!-- <p>window width: {{ $windowWidth }}</p> -->
       <hr>
-      <img alt="question_box" src="./assets/silence_sounds_question_box_blank_pink.png" />
+      <!-- <img alt="question_box" src="./assets/silence_sounds_question_box_blank_pink.png" /> -->
+      <!-- <img alt="question_box" src="./assets/good_black_pink.png" /> -->
+      <!-- <img alt="question_box" src="./assets/Better_black_pink.png" /> -->
+      <!-- <img alt="question_box" src="./assets/best_black_pink.png" /> -->
     </div>
   </div>
 </template>
@@ -32,7 +45,7 @@ app.use(VueWindowSizePlugin);
   margin-left: 5px; */
   padding: 0px 0px;
   margin: 0px 0px;
-  border: 0px 0px;
+  /* border: 0px 0px; */
 
 }
 
@@ -51,7 +64,7 @@ app.use(VueWindowSizePlugin);
   .center img {
     width: 100%;
     height: 80%;
-    border: 10px solid black ;
+    /* border: 10px solid black ; */
   }
 
   .zoom-img {
