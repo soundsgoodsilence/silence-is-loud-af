@@ -31,4 +31,6 @@ npm run build
 ## Install dependencies
 ```sh
 npm install @formkit/auto-animate
+npm add -D @vue/tsconfig
+npm install @vitejs/plugin-vue
 ```
