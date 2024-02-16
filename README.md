@@ -17,7 +17,7 @@ npm install
 ```
 
 ### Compile and Hot-Reload for Development
-
+### aka run dev server locally
 ```sh
 npm run dev
 ```
