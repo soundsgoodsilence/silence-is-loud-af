@@ -10,6 +10,9 @@ export default defineConfig({
     vue(),
     ts(),
   ],
+  esbuild: {
+    // ...
+  },
    resolve: {
      alias: {
        '@': fileURLToPath(new URL('./src', import.meta.url))
