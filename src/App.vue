@@ -1,3 +1,4 @@
+<!-- my javascript part -->
 <script setup>
 import { createApp } from 'vue';
 import App from "./App.vue";  // your App component
@@ -7,21 +8,47 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue';
 const app = createApp(App);
 // const [wrapperEl] = useAutoAnimate()
 app.use(VueWindowSizePlugin).use(autoAnimatePlugin)
-//.mount('#app');
+//.mount('#app'); <- this is done in main.js
+// const words = ref(["./assets/good_black_pink.png", "./assets/Better_black_pink.png", "./assets/best_black_pink.png"])
+const words = ref([ 
+        <img alt="good" src="./assets/good_black_pink.png" />,
+        <img alt="better" src="./assets/Better_black_pink.png" />,
+        <img alt="best" src="./assets/best_black_pink.png" />,
+])
+
+function makeStringImage(list) {
+  log
+}
+
+function removeItem(toRemove) {
+  items.value = items.value.filter((item) => item !== toRemove)
+}
 </script>
 
 
+
+
+
+<!-- my HTML part -->
 <template>
   <div autoAnimatePlugin class="parent">
     <div ref="wrapperEl" class="parent">
-      <h2 @click="isOpen = !isOpen" class="text-xl font-bold">
-      
-        <img alt="question_box" src="./assets/good_black_pink.png" />
-        <img alt="question_box" src="./assets/Better_black_pink.png" />
-        <img alt="question_box" src="./assets/best_black_pink.png" />
-      </h2>
+      <h2>Click the images to remove them.</h2>
+        <ul v-auto-animate>
+          <li
+          v-for="word in words"
+          :key="word"
+          @click="removeItem(word)"
+          >
+        {{ word }}
+      </li>
+        </ul>
+        <!-- <img alt="good" src="./assets/good_black_pink.png" /> -->
+        <!-- <img alt="better" src="./assets/Better_black_pink.png" /> -->
+        <!-- <img alt="best" src="./assets/best_black_pink.png" /> -->
+      <!-- </h2> -->
       <!-- <p>window width: {{ $windowWidth }}</p> -->
-      <hr>
+      <!-- <hr> -->
       <!-- <img alt="question_box" src="./assets/silence_sounds_question_box_blank_pink.png" /> -->
       <!-- <img alt="question_box" src="./assets/good_black_pink.png" /> -->
       <!-- <img alt="question_box" src="./assets/Better_black_pink.png" /> -->
@@ -33,6 +60,7 @@ app.use(VueWindowSizePlugin).use(autoAnimatePlugin)
 
 
 
+<!-- my CSS part -->
 <style scoped>
 
 .parent {
