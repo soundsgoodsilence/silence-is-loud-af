@@ -6,16 +6,22 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-   plugins: [
-    vue(),
-    ts(),
-  ],
-  esbuild: {
-    // ...
-  },
-   resolve: {
-     alias: {
+   plugins: 
+   [
+    vue(), 
+   ]
+   , 
+   esbuild: 
+   {
+    // Configure esbuild options here
+    jsx: 'vue',
+  }
+  , 
+  resolve: 
+  {
+     alias: 
+     {
        '@': fileURLToPath(new URL('./src', import.meta.url))
      }
-   }
+  }
  })
